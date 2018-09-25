@@ -1,35 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import { createStore } from 'redux'
-import { Provider, connect } from 'react-redux'
-
-
-import './index.css';
-import App from './step3/App';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker';
 
-// Reducer
-function counter(state = { count: 0 }, action) {
-    const count = state.count
-    switch (action.type) {
-        case 'increase':
-            return { count: count + 1 }
-        default:
-            return state
-    }
-}
+import './index.css';
+import S5 from './step5/';
 
-// Store
-const store = createStore(counter)
+const NotFound = () => <h1>404 Not Found</h1>
 
-
-// ReactDOM.render(<App />, document.getElementById('root'));
+const App = () => (
+    <Router>
+        <div>
+            <Switch>
+                <Route exact path="/" component={S5.Home}/>
+                <Route path="/login" component={S5.Login}/>
+                <Route path="/admin" component={S5.Admin}/>
+                <Route path="/info" component={S5.Information}/>
+                <Route component={NotFound}/>
+            </Switch>
+        </div>
+    </Router>
+)
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
+    <div>
+        <App/>
+    </div>,
     document.getElementById('root')
 )
 
