@@ -28,3 +28,13 @@ git checkout -b step2
 
 // componentWillMount -> render -> componentDidMount (REST call, Ajax, Promise) ... componentWillUnMount -> componentDidUnMount
 ```
+
+````bash
+git checkout -b step3
+//create folder src/step3
+//create js src/step3/App.js
+
+npm install --save redux react-redux prop-types
+//or:
+yarn add redux react-redux prop-types
+```
