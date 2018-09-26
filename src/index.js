@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+
+import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
 import logo from './chinasofti_logo.png';
 import './App.css';
+import Navigator from './step6/Navigator'
+import Footer from './step6/Footer'
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -21,7 +25,8 @@ const App = () => (
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
-                <h1 className="App-title">Welcome to On-Leave Management System Application</h1>
+                <h1 className="App-title">Welcome to On-Leave Management Dashboard</h1>
+                <Navigator/>
             </header>
             <Switch>
                 <Route exact path="/" component={S5.Home}/>
@@ -30,6 +35,8 @@ const App = () => (
                 <Route path="/info" component={S5.Information}/>
                 <Route component={NotFound}/>
             </Switch>
+        <hr/>
+            <Footer/>
         </div>
     </Router>
 )
