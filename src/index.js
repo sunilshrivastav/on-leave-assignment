@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import 'font-awesome/css/font-awesome.min.css';
+
 import registerServiceWorker from './registerServiceWorker';
 
 import './index.css';
@@ -10,7 +12,7 @@ const NotFound = () => <h1>404 Not Found</h1>
 
 const App = () => (
     <Router>
-        <div>
+        <div className="App">
             <Switch>
                 <Route exact path="/" component={S5.Home}/>
                 <Route path="/login" component={S5.Login}/>

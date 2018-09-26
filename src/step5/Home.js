@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import {Button} from "react-bootstrap";
 import {Redirect} from 'react-router-dom'
+import 'font-awesome/css/font-awesome.min.css';
 
-const wellStyles = {maxWidth: 400, margin: '0 auto 10px'};
+const wellStyles = {maxWidth: 500, margin: '100px auto 100px'};
 
 class Home extends Component {
     constructor(props) {
@@ -27,13 +28,20 @@ class Home extends Component {
         }
         return (
             <div className="well" style={wellStyles}>
-                <Button bsStyle="primary" bsSize="large" block
-                        onClick={this.handleClick}>
-                    On-Leave Login
+                <i className="fa fa-user-plus" style={{fontSize: 48, color: "red"}}></i>
+                <Button bsStyle="btn-primary btn-danger"
+                        bsSize="large" block
+                        onClick={this.handleClick}
+                >
+                    On-Leave Login (Request)
                 </Button>
-                <Button bsSize="large" block
-                        onClick={this.handleClick}>
-                    Admin Login
+                <i className="fa fa-user-plus" style={{fontSize: 48, color: "blue", marginTop:100}}></i>
+                <Button
+                    bsStyle="btn-primary btn-success"
+                    bsSize="large" block
+                    onClick={this.handleClick}
+                >
+                    Admin Login (Approver)
                 </Button>
             </div>
         )
