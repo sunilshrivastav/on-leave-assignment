@@ -29,19 +29,19 @@ class Home extends Component {
         return (
             <div className="well" style={wellStyles}>
                 <i className="fa fa-user-plus" style={{fontSize: 48, color: "red"}}></i>
-                <Button bsStyle="btn-primary btn-danger"
+                <Button bsStyle="danger"
                         bsSize="large" block
                         onClick={this.handleClick}
                 >
                     On-Leave Login (Request)
                 </Button>
-                <i className="fa fa-user-plus" style={{fontSize: 48, color: "blue", marginTop:100}}></i>
+                <i className="fa fa-user-plus" style={{fontSize: 48, color: "green", marginTop:100}}></i>
                 <Button
-                    bsStyle="btn-primary btn-success"
+                    bsStyle="success"
                     bsSize="large" block
                     onClick={this.handleClick}
                 >
-                    Admin Login (Approver)
+                    Admin Login (Approval)
                 </Button>
             </div>
         )

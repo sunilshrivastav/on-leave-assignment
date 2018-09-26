@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import 'font-awesome/css/font-awesome.min.css';
+import logo from './logo.svg';
+import './App.css';
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -13,6 +15,10 @@ const NotFound = () => <h1>404 Not Found</h1>
 const App = () => (
     <Router>
         <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo"/>
+                <h1 className="App-title">Welcome to React</h1>
+            </header>
             <Switch>
                 <Route exact path="/" component={S5.Home}/>
                 <Route path="/login" component={S5.Login}/>
